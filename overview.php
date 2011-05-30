@@ -308,8 +308,8 @@ if( ( isset($class) ) AND ($class != "") ){
              WHERE id_attr=fk_id_attr 
                  AND attr_name="address" 
                  AND fk_id_item=host_id) AS IP,
-       (SELECT INET_ATON(IP)
-             ) AS BIN_IP,
+       IF((SELECT INET_ATON(IP)),(SELECT INET_ATON(IP)),(SELECT IP)) AS BIN_IP,
+       -- (SELECT INET_ATON(IP)) AS BIN_IP,
        (SELECT attr_value 
              FROM ConfigValues,ConfigAttrs,ConfigClasses,ItemLinks 
              WHERE id_attr=ConfigValues.fk_id_attr 
