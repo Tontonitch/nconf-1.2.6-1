@@ -53,7 +53,7 @@ if (AUTH_TYPE == "file"){
     if ( (file_exists($filename)) AND ( $file = fopen($filename, "r") ) ){
         while ( $row = fgets($file) ) {
             # Do not use commented rows(#) or blank rows
-            if ( $row != "" AND !ereg("^\s*(#|\/\*|\*\/|<\?|\?>)", $row) ){
+            if ( $row != "" AND !preg_match("/^\s*(#|\/\*|\*\/|<\?|\?>)/", $row) ){
                 $user = explode("::", $row);
                 # check uppercase crypt part, remove {CLEAR} if exists
                 $password = prepare_password($user[1]);
