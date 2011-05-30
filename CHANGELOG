@@ -1,0 +1,104 @@
+Release 1.2.6 (2009-11-26)
+
+FIXED    'permission denied' bug when a 'normal' user tries to clear a form
+FIXED    'unknown' user bug in history entry when generating updated Nagios config
+FIXED    max_length limit of 'address' field when cloning a host
+FIXED    a bug within the input form for service parameters (proper handling of the '!' character)
+FIXED    a problem with 'multi_modify' not enforcing ONCALL_GROUPS setting
+FIXED    quotes bug " (double) and ' (single) in the Attributes -> Show / Add form for attributes of type 'select' 
+         and in all other text fields (attribute & friendly name, description, possible values, pre-defined value)
+
+ADDED    CSV importer and example scripts to import any type of items from a CSV file into NConf
+ADDED    an ID-wrapper script (id_wrapper.php) that allows users to embed a link to the NConf 'details' page,
+         knowing only the name of an item (item name and item class are passed as GET-parameters)
+ADDED    configuration option OVERVIEW_QUANTITY_STANDARD
+ADDED    configuration option SELECT_VALUE_SEPARATOR
+ADDED    'host-template' class and attributes, added several predefined host-template items
+ADDED    'service-template' class and attributes, added several predefined service-template items
+ADDED    'use' attribute to 'hosts' & 'services' classes
+ADDED    a new 'host_template' and 'service_template' attribute to timeperiods, nagios-collectors and nagios-monitors. This allows users to 
+         specify templates to be auto-assigned to each service which is linked with these items.
+ADDED    'default_service_name' attribute to checkcommand class. This value will be used when adding new services instead of the checkcommand name.
+ADDED    'notes' and 'notes_url' attributes to hostgroup and servicegroup classes.
+ADDED    'stale_service_command' attribute to 'nagios-monitor' class. If set, this writes a 'dummy' check_command to all services on a 'nagios-monitor.
+         The 'dummy' check_command is therefore no longer triggered by the 'active_checks_enabled' flag.
+ADDED    new datatype 'assign_cust_order' to ConfigAttrs table and GUIs. This allows users to specify the order of how linked items 
+         should be written to the config (necessary for 'use' attributes to define order of templates).
+MERGED   generate_config.pl with NConf perl-API, moved certain functions to perl modules
+
+RENAMED  old NConf host-templates to 'host presets'
+RENAMED  'normal_check_interval' and 'retry_check_interval' attributes to 'check_interval' and 'retry_interval'
+
+REMOVED  'dependent_service_description' attribute from 'service' class
+
+CHANGED  'overview': user can now choose the amount of entries he wants to see, and also jump to first / last page
+CHANGED  'add service': services can be re-used for same host without having to rename existing ones first (service auto-renamed to '_2')
+CHANGED  layout of 'assign_many' select-boxes. New is also a live-search functionality for faster filtering of many entries.
+CHANGED  'advanced' tab to remain open while switching views (requires cookies to be enabled in browser)
+CHANGED  value separator for attributes of type 'select' from ',' to '::'
+CHANGED  Nagios config importer: import files are now processed in sequential order. Items are not read randomly anymore.
+CHANGED  and extended several functions of the NConf perl-API (refer to API documentation for details)
+CHANGED  'generate config': added possibility to use %...% style NConf macros in any text attribute (e.g. %NAGIOS_SERVER_NAME% etc.)
+CHANGED  'generate config': added 'check_result_path' = nconf/temp/ to temp/test/nagios.cfg for syntax checking. This eliminates 
+         the common error 'Unable to write to check_result_path'.
+CHANGED  ConfigAttrs.link_as_child attribute in the database to ENUM('yes','no') NOT NULL default 'no'
+CHANGED  several host, service, timeperiod, nagios-collector and nagios-monitor attributes from 'mandatory' to 'not mandatory'
+CHANGED  the way several attributes are inherited from timeperiods based on check_period & notification_period attributes (see release notes!)
+CHANGED  searchfilters: '%' wildcards are now changed to '*', and '*' will not change back to '%' anymore
+CHANGED  searchfilter in 'Show Services': it now filters for hostname AND servicename combined
+
+Release 1.2.5 (2009-06-12)
+
+FIXED    quoting problems (backslashes added) when editing values with php.ini-option "magic_quotes_gpc = On" --> DEPRECATED PHP FUNCTION
+FIXED    empty contact_groups field in host did not change contact_groups in the linked services
+FIXED    'modify attribute': disabling some fields did not work correctly
+FIXED    'delete attribute': after deleting an attribute, the correct class will be displayed now
+
+ADDED    static file editor and deployment of static (Nagios) files
+ADDED    ADD-ONS folder with several useful scripts (scripts for config deployment, history cleanup, as well as stale_service.sh script)
+ADDED    NConf config check: checks your vars (constants and arrays) must be set properly, otherwise a critical error is thrown
+ADDED    constant "VERSION_NUMBER"
+ADDED    update functionality and corresponding folder structure
+ADDED    perl-API for database access (beta-version, changes possible in the future)
+ADDED    basic bulk-import functionality (to be extended in upcoming releases)
+ADDED    'dependency view' looks up parents and child items of a selected item (host), it contains also a direct Nagios access mode
+ADDED    'advanced' box now has a 'multi delete' and 'select all' option
+ADDED    'clone service' functionality to clone a service to one or more hosts
+ADDED    'overview': table title will now sort the content for each row ASC/DESC
+ADDED    'overview': entries are now limited to given amount (standard 24, configurable in include/gui.php), switchable pages <-  ->
+ADDED    'add/modify class': added two new attributes, which allow to export any class into a custom file
+         - 'out_file' (generated filename)
+         - 'nagios_object' (Nagios object definition)
+ADDED    AJAX features:
+         - 'add item': info tab with info about timeperiods and contact groups
+         - 'generate config': 'loading' icon runs until config is generated
+ADDED    action url attribute in host and service class.
+
+REMOVED  constant "URLROOTPATH", NConf now handles this on its own
+REMOVED  'add attribute' functionality is now implemented under 'modify attribute'
+
+CHANGED  default values, description, maxlength, ordering and mandatory-flag of several attrs
+CHANGED  installer updated with php-mysql check and notification about not using :: in a password when auth = file
+CHANGED  all "<?" tags to "<?php" tags, php.ini option "short_open_tag" can now be ON or OFF
+CHANGED  navigation menu entry "Attributes - Add", it now calls 'modify_attr' to add new attributes
+CHANGED  when trying to access a page (unauthenticatedly), login prompt will now apear and after successful login it will 
+         redirect you to the page that was called
+CHANGED  'overview': search will now send data via GET method, this will prevent the "resend data" message when going back
+CHANGED  'delete': now also has multi-delete functionality, and displays items to be deleted in tree view
+CHANGED  'multi-modify':  now also allows changing service names of multiple services at the same time
+CHANGED  'add attribute': now warns if attr name already exists in same class (not allowed)
+CHANGED  'add attribute': now remembers/caches your entered data, if there was a error and you need to go back
+CHANGED  'add attribute': now makes sure naming_attrs are always mandatory
+CHANGED  'generate config': script now writes 'trap' services to collector config, if no monitor server is present
+CHANGED  'generate config': filenames to be generated are now read from the DB ('out_file' attr), users can easily implement their own classes now
+CHANGED  'generate config': static files are now also included in tar, if they are managed through NConf
+CHANGED  'generate config': error handling, many more things are checked now before gererating the config
+CHANGED  'generate config': service check_command on monitor servers is now dependent on "active_checks_enabled" flag (service_is_stale not forced anymore)
+CHANGED  'auth by ldap': now enforcing LDAP v3
+CHANGED  'auth by file': the delimiter in the password file is now :: (2 colons)
+CHANGED  'auth by file': password file is now a php file (file is not displayed by apache anymore!)
+CHANGED  'auth by file': password attribute encryption type is now case-insensitive ( {crypt} is the same as {CRYPT} )
+
+Release 1.2.4 (2009-03-05)
+
+CREATED  The first official release of NConf

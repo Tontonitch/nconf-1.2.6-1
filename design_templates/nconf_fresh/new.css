@@ -1,0 +1,486 @@
+/* DIVS */
+#header, #content, #footer, #breadcrumb_bar {
+     width: 90%;
+     min-width: 964px;
+     max-width: 1260px;
+}
+
+#title {
+     background-image: url("/design_templates/nconf_standard/NC-logo_prof.gif");
+     background-repeat: no-repeat;
+     background-position: 20px;
+     width: 986px;
+     height: 60px;
+     text-align: left;
+     color: black;
+     font-size: 23px;
+     text-indent: 160px;
+     line-height: 65px;
+     overflow: hidden;
+}
+
+#titlesub {
+     width: 986px;
+     height: 20px;
+     text-align: left;
+     font-weight: 700;
+     font-size: 10pt;
+     color: #ffffff;
+     overflow: hidden;
+} 
+
+#titleoverview {
+     margin-top: 10px;
+     margin-bottom: 10px;
+     width: 986px;
+     height: 18px;
+     border-width: thin;
+     border-bottom-color: #937883;
+     border-bottom-style: solid;
+     text-align: left;
+     vertical-align: bottom;
+}
+
+#centercontent {
+     width: 520px;
+     text-align: left;
+     margin-bottom: 0px;
+     padding-top: 2px;
+     margin: 0 auto;
+}
+
+#maincontent {
+     position: relative;
+     float: left;
+
+     width: 778px;
+     text-align: left;
+     margin-bottom: 0px;
+     padding-top: 2px;
+}
+
+#navigation {
+    position: relative;
+    float: left;
+	width: 200px;
+	text-align: left;
+	margin-top: 0px !important;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#main_content {
+     margin: 2px 0 0;
+     padding: 0 0 0 15px;
+}
+
+#copyright {
+	width:986px;
+	font-size:0.9em;
+	text-align:right;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* CONTENT */
+
+body, html {
+     color: #4B1E30;
+     background-color: #ffffff;
+}
+
+body, html, textarea, table, button, input {
+     line-height: 1.27;
+     letter-spacing: 0;
+     font: 400 11px Arial, sans-serif;
+}
+
+body {
+     margin: 0 14px 20px;
+     text-align: center;
+     overflow: -moz-scrollbars-vertical;
+}
+
+
+.noborder {
+     border-bottom: none;
+}
+
+.autocomplete {
+     font-family: Tahoma;
+     font-size: 8pt;
+     background-color: #ffffff;
+     border: 1px solid black;
+     position: absolute;
+     cursor: default;
+     overflow: auto;
+     overflow-x: hidden;
+}
+
+.autocomplete_item {
+     padding: 1px;
+     padding-left: 5px;
+     color: black;
+     width: 100%;
+}
+
+.autocomplete_item_highlighted {
+     padding: 1px;
+     padding-left: 5px;
+     color: #ffffff;
+     background-color: #0A246A;
+}
+
+#ip_div {
+     overflow: scroll;
+}
+
+.bordertop {
+     border-top: 1px solid #C1B2B4;
+}
+
+
+
+/* NAVIGATION/MENU*/
+
+#left_navigation .accordion .box_content {
+     margin: 0 0 1px;
+     padding-top: 6px;
+     background-color: #EBE0E1;
+}
+
+.accordion h2 {
+     border-top: 2px solid #ffffff;
+     margin: 0;
+     padding-bottom: 0;
+     padding-top: 0;
+     height: 1.43em;
+     background-color: #B3B7DC;
+}
+
+.accordion h2, .bg_content, .bg_header, .stepnavigation h2 {
+     line-height: 1.43;
+}
+
+.column, .accordion .box_content {
+     padding-left: 6px;
+}
+
+.accordion .box_content {
+     margin: 0;
+     padding: 6px;
+     background-color: #EBE0E1;
+}
+
+#left_navigation .accordion .box_content select {
+     width: 95%;
+     margin: 3px 0 0;
+     padding: 0;
+     height: 16px;
+     line-height: 1.3;
+}
+
+.accordion span, .stepnavigation span {
+     margin: 0;
+     padding-left: 6px;
+     padding-right: 6px;
+}
+
+.accordion .box_content img {
+     margin-left: -6px;
+     margin-bottom: 6px;
+}
+
+/* Uerberschriften */
+
+.column h1, .column h2, .column h3, .column h4, .box_content h1, .box_content h2, .box_content h3, .box_content h4, .content_popup h1, .content_popup h2, .content_popup h3, .content_popup h4 {
+     margin-left: 0;
+}
+
+h1, h2, h3, h4 {
+     margin-left: 6px;
+}
+
+h1 {
+     font-size: 16px;
+     line-height: 1.2;
+     padding: 0;
+     margin: 0 0 .731em;
+}
+
+h2, .level_1 {
+     font-size: 12px;
+}
+
+h2 {
+     line-height: 1.3;
+     padding: 0;
+     margin: 1.7em 0 .5em;
+}
+.level_1 {
+     line-height: 1.5;
+}
+
+h3, h4 {
+     font-size: 1em;
+     line-height: 1.27;
+     padding: 0;
+     margin: 0 0 .2em;
+}
+
+h1, h2, h3, .accordion li, .accordion ul, form {
+     padding: 0;
+     margin: 0;
+}
+
+/* LINKS*/
+
+a:hover, a:active, a.active, .link:hover, .link.active, #header a:hover, #header a:active, #header a.active, #header .link.active, #header .header_button_hover, #left_navigation a:hover, #left_navigation a:active, #left_navigation a.active, #left_navigation .link.active, #main_content a:hover, #main_content .link:hover, #main_content a:active, #main_content a.active, #main_content .link.active, #accordion .active h2 span, #footer a:hover, #footer a:active, #footer a.active, #footer .link.active, button:hover, input.submit:hover, .submit:hover input, input.delete:hover, input.action:hover, input.back:hover, input.edit:hover, input.reset:hover, input, input.error, select, select.error, textarea {
+     color: black;
+     /*color: #4B1E30;*/
+}
+
+a, :link, .link, #header, #header a, #header .link, #header button, #left_navigation a, #left_navigation .link, #main_content a, #main_content .link, #breadcrumb_navigation a, #breadcrumb_navigation .link, #aux_content a, #aux_content .link, #aux_content .accordion .footer, #footer a, #footer .link, button, input.submit, .submit input, input.back, input.delete, input.edit, input.action, input.reset, span.action, span.detail {
+     color: #1C3462;
+     /*color: #2E549B;*/
+     text-decoration: none;
+}
+
+.action, .detail, #aux_content .action, #aux_content .detail {
+     padding-left: 11px;
+     background-position: 0 6px;
+     background-repeat: no-repeat;
+}
+
+#aux_content .action, #aux_content .detail, a.action, a.detail, a.back {
+     background-position: 0 4px;
+}
+
+.detail {
+     /*color: #2E549B;*/
+     color: black
+}
+
+a, :link, .link, #function_container div.print span:hover, #function_container div.bookmark span:hover {
+     text-decoration: none;
+}
+
+#highlight:hover {
+     background-color: #FAD3CD;
+}
+a.action, div.action, span.action, 
+a.detail, div.detail, span.detail, .imageLink .strong { background-image: url("/design_templates/nconf_standard/arrow.gif"); }
+
+a.action:hover, div.action:hover, span.action:hover,
+a.detail:hover, div.detail:hover, span.detail:hover, .imageLink .strong:hover { background-image: url("/design_templates/nconf_standard/arrow.gif"); }
+a.expanded, th, .even, h2.bg_content, .bg_content h2, td.header {
+     background-color: #EBE0E1;
+}
+
+a.expanded:hover, .level_1_selected, .odd, input.disabled {
+     background-color: #F9F3F4;
+}
+
+.ct-checkbox input, .checkbox, input.radio, img {
+     border: 0;
+}
+
+a.footerblinder span, .action, .detail, .back, .reset, .delete, .find, .edit, .submit, .help, .pdf, .info, .specification, .delivery_contents, .view_3d, .zoom_plus, .popup, .map {
+     display: block;
+}
+#left_navigation .accordion h2, h4.landingpage_box_subtitle, .bg_header {
+     background-color: #B3B7DC;
+}
+
+/* FORM Attribute */ 
+
+.submit button, input.submit, div.submit input, .delete button, input.delete, a.delete, .back button, input.back, a.back, .edit button, input.edit, a.edit, a.find, a.pdf, a.info, a.help, a.plus, a.minus, a.action, .action a, a.detail, .detail a, .reset, a.specification, a.delivery_contents, a.view_3d, a.zoom_plus, a.popup, a.map {
+     cursor: pointer;
+     text-align: left;
+     font-weight: 700;
+     margin: 0;
+     border: none !important;
+     background-repeat: no-repeat;
+     background-color: transparent;
+}
+
+.back button, input.back, .submit button, div.submit input, input.submit {
+     background-position: 0 6px;
+     padding-left: 8px !important;
+     padding-top: 1px;
+}
+
+input {
+     padding: 2px 4px;
+}
+
+select {
+     padding: 0;
+     font: 400 11px Arial, sans-serif;
+}
+
+button {
+     border: 0;
+     margin: 0;
+     cursor: pointer;
+     display: inline;
+     font-weight: 700;
+     background: none;
+}
+
+input.radio, input.checkbox {
+     top: 3px;
+     position: relative;
+     width: auto !important;
+}
+
+input[type="radio"], input[type="checkbox"] {
+     border: 0;
+     padding: 0;
+     margin: 0 4px 0 0;
+}
+
+input, select, textarea {
+     font-size: 12px;
+     border: 1px #C1B2B4 solid;
+     margin: 1px;
+     padding: 0;
+     vertical-align: middle;
+}
+
+input[type=text], input[type=password], input[type=file] {
+     height: 17px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+     border-color: #896C77 !important;
+}
+
+input[type=radio], input[type=checkbox] {
+     height: 11px;
+     width: 11px;
+}
+
+.table, select, input[type="text"], input[type="search"], input[type="password"] {
+     border: 1px solid #C1B2B4;
+}
+
+.input {
+     width: 200px;
+}
+
+/* TABLE */
+
+table {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     border-spacing: 0;
+     table-layout: fixed;
+     border-collapse: collapse;
+}
+
+th, td {
+     margin: 0;
+     text-align: left;
+     vertical-align: middle;
+}
+
+.simpletable {
+     border-collapse: collapse;
+}
+
+
+.simpletable {
+     border-collapse: collapse;
+}
+
+.simpletable th, .simpletable tbody td, .simpletable tfoot td {
+     margin: 0;
+     padding: 0;
+     border-right: 1px solid #ffffff;
+}
+
+.simpletable th div, .simpletable .first, .simpletable td.header div {
+     font-weight: 700;
+     padding: 0 0 0 6px;
+}
+
+.simpletable tbody td.header {
+     line-height: inherit;
+     padding: 0;
+}
+
+.simpletable th div, .simpletable td.header div {
+     margin: 0;
+     padding: 6px;
+     border-top: 1px solid #C0B2B2;
+}
+
+.simpletable tbody th div {
+     border-top: none;
+}
+
+.simpletable .first {
+     margin: 0;
+     height: 28px;
+     line-height: 2.36;
+     border-right: 1px solid #ffffff;
+     border-bottom: 1px solid #C0B2B2;
+}
+
+.simpletable tfoot td {
+     height: 1px;
+     line-height: 0;
+}
+
+.simpletable .no_bottom_line td {
+     border-bottom: 0;
+     padding-bottom: 0;
+     margin-bottom: 0;
+}
+
+.simpletable tbody td {
+     padding: 2px;
+     line-height: 1.1;
+}
+
+#breadcrumb_bar, .simpletable tbody td, .simpletable th, .underline, #ul_level2, .level_1 {
+     border-bottom: 1px solid #C1B2B4;
+}
+
+#main_navigation {
+	left: 0px;
+	top: -90px;
+	z-index: 1;
+	height: 22px;
+	line-height: 1.6;
+	margin-left: 19%;
+	padding-left: 14px;
+}
+
+/* OVERVIEW */
+.overview_head {
+    vertical-align: top;
+    margin: 20px 0 0 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.overview_head h3 {
+    vertical-align: top;
+}
+.overview_head img {
+    vertical-align: middle;
+}
+.overview_head td{
+    height: 26px;
+}
+
+.overview_quantity a{
+    text-decoration: underline;
+}
+.overview_quantity {
+    text-align: right;
+    vertical-align: bottom;
+}
+

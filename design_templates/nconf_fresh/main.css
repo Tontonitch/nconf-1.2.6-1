@@ -1,0 +1,383 @@
+/* list color */
+.color_list1 {
+    background-color: #F9F9F9;
+}
+/* darker one */
+.color_list2 {
+    background-color: #EEEEEE;
+}
+
+/* borderline in history & history tab */
+.color_list3 {
+    background-color: #D0D0D0;
+}
+
+/* hover over table lines */
+#highlight:hover {
+     background-color: #D0D0D0;
+}
+.highlight:hover {
+     background-color: #D0D0D0;
+}
+
+
+/* host with NO monitor: row color in overview */
+.color_nomon {
+    background-color: #FFCC99;
+}
+/* NO monitored text color */
+.color_nomon_text {
+    color:  red;
+}
+
+/* warning color (eg in overview) */
+.color_warning {
+    background-color: #E98080;
+}
+
+#attention{
+    color: red;
+}
+
+.attention{
+    color: red;
+}
+
+.mark_as_mandatory{
+    color: red;
+    width: 20px;
+    vertical-align: top;
+}
+
+/*
+   SHOW CLASS GROUP 'ing
+*/
+
+.color_group_border {
+    background-color:       #D0D0D0;
+    border-left:  3px solid #D0D0D0;
+    border-right: 3px solid #D0D0D0;
+}
+.color_group_border_close {
+    border-top: 3px solid #D0D0D0;
+}
+.color_group_border_left {
+    border-left: 3px solid #D0D0D0;
+}
+
+.color_group_border_right {
+    border-right:3px solid #D0D0D0 !important;
+}
+
+.color_group_border_top_bottom {
+    border-top: 3px solid #D0D0D0 ;
+}
+
+/*
+   LINK COLOR
+*/
+
+a:hover, a:active, a.active, .link:hover, .link.active, #header a:hover, #header a:active, #header a.active, #header .link.active, #header .header_button_hover, #left_navigation a:hover, #left_navigation a:active, #left_navigation a.active, #left_navigation .link.active, #main_content a:hover, #main_content .link:hover, #main_content a:active, #main_content a.active, #main_content .link.active, #accordion .active h2 span, #footer a:hover, #footer a:active, #footer a.active, #footer .link.active, button:hover, input.submit:hover, .submit:hover input, input.delete:hover, input.action:hover, input.back:hover, input.edit:hover, input.reset:hover, input, input.error, select, select.error, textarea {
+     color: black;
+}
+
+a, :link, .link, #header, #header a, #header .link, #header button, #left_navigation a, #left_navigation .link, #main_content a, #main_content .link, #breadcrumb_navigation a, #breadcrumb_navigation .link, #aux_content a, #aux_content .link, #aux_content .accordion .footer, #footer a, #footer .link, button, input.submit, .submit input, input.back, input.delete, input.edit, input.action, input.reset, span.action, span.detail {
+     color: #585858;
+     text-decoration: none;
+}
+
+
+body{
+    margin: 0;
+    padding:0;
+    color: #39484B;
+    background-image: url(body_bg.gif);
+    background-repeat: repeat-x;
+    background-position: 0px 117px;
+
+}
+
+#logo {
+    background-image: url(nc-logo.gif);
+    background-repeat: no-repeat;
+    width: 986px;
+    height: 97px;
+}
+
+/* TOP PAGE HEADER BACKGROUND */ 
+#title {
+    background-image: url(title_gradient.gif);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    width: 100%;
+    height: 97px;
+    color: black;
+    font-size: 23px;
+    text-indent: 20px;
+    background-color: #4D6064;
+}
+#titlesub {
+    background-image: url(title_gradient_sub.gif);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    width: 100%;
+    text-align: center;
+}
+#titlesub table{
+    font-weight: bold;
+    color: white;
+    text-indent: 0px;
+    width: 986px;
+}
+#titlesub table a {
+    font-weight: bold;
+    color: white;
+    text-indent: 0px;
+}
+
+
+#mainwindow {
+    margin: 10px auto 0 auto;
+    text-align: center;
+    background-color: transparent;
+    width: 1000px;
+    min-width: 1000px;
+
+    min-height: 535px;
+    height:auto !important;
+    height: 535px;
+}
+
+
+/*
+   NAVIGATION COLOR
+*/
+h2{
+    font-size: 12px;
+    line-height: 1.43;
+}
+/* Navigation Title bar */
+.accordion h2, .header{
+    background-color: transparent;
+    background-image: url(nav_gradient.gif);
+    background-repeat: repeat-x;
+    background-position: center center;
+
+    border:1px solid #9F9FBC;
+    margin-top: 3px;
+}
+
+/*Backgroud color in navigation*/
+.accordion .box_content {
+    background-color: #F3F3F3;
+    margin-bottom: 10px;
+}
+
+.box_content{
+    background-color: #F3F3F3;
+}
+
+.box_content img{
+    vertical-align:middle;
+}
+
+/* generate space between tables */
+.box_content table{
+    margin-top: 1em;
+}
+
+/* first table should bot have margin-top */
+.box_content table:first-child {
+     margin-top: 0px;
+}
+
+/* Navigation short links like History or General Overview */
+.link_with_tag {
+    color: #585858;
+    font-weight: bold;
+    background-image: url(arrow.gif);
+    padding-left: 11px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+.link_with_tag2 {
+    color: #585858;
+    font-weight: bold;
+    background-image: url(arrow.gif);
+    padding-left: 11px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+.link_with_tag_active {
+    color: #585858;
+    background-color: #D0D0D0;
+    font-weight: bold;
+    background-image: url(arrow.gif);
+    padding-left: 11px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+
+
+
+
+/*
+   OTHER TABLE COLOR
+*/
+
+/* background of normal tables titlebar */
+.bg_header {
+    background-color: #D0D0D0;
+    height: 20px;
+}
+/* table in history */
+.bg_header_2{
+    background-color: #D0D0D0;
+    font-weight: bold;
+}
+
+
+
+
+/* install text */
+
+.status_failed{
+    color: red;
+    font-weight: bold
+}
+
+.status_unknown{
+    color: orange;
+    font-weight: bold
+}
+
+.status_ok{
+    color: green;
+    font-weight: bold
+}
+
+
+
+
+/* additional migration from other css */
+input, select, textarea {
+    width: 250px;
+}
+
+.livesearch_input {
+    width: 183px;
+    margin-bottom: 4px;
+}
+
+
+#buttons input{
+    width: 50px;
+}
+
+.editor_field{
+    width:100%;
+    *width: 760px;
+    font-family:Courier New,Courier;
+}
+
+.editor_info {
+    width: 450px;
+    text-align: left;
+    float:right;
+}
+
+.dependency_info {
+    width: 250px;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.dependency_info h2 {
+    margin-left: -5px;
+    padding-left: 5px;
+}
+
+.tooltip {
+  position: fixed;
+  display: none;
+  background-color: #F2F2F2;
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+  margin: 20px 0 0 10px;
+}
+
+.error {
+    width: 500px;
+}
+
+/*  CSS for functions from dhtmlgoodies.com  */
+
+/* style for multiple_select boxes (dhtmlgoodies.com) */
+    .multipleSelectBoxControl span{ /* Labels above select boxes*/
+        font-family:arial;
+        font-size:11px;
+        font-weight:bold;
+    }
+    .multipleSelectBoxControl div select{   /* Select box layout */
+        font-family:arial;
+        height:100%;
+    }
+    .multipleSelectBoxControl input{    /* Small butons */
+        /*width:25px; */
+    }
+    
+    .multipleSelectBoxControl div{
+        float:left;
+    }
+
+.assign_many td{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+/* style for moving divs */
+    
+.dhtmlgoodies_question{ /* Styling question */
+
+    overflow:hidden;
+    cursor:pointer;
+}
+.dhtmlgoodies_answer{   /* Parent box of slide down content */
+
+    visibility:hidden;
+    height:0px;
+    overflow:hidden;
+    position:relative;
+
+}
+.dhtmlgoodies_answer_content{   /* Content that is slided down */
+    padding:1px;
+    font-size:0.9em;
+    position:relative;
+}
+
+.clearer{
+    clear: both;
+    height: 1px;
+}
+
+
+#footer {
+    width: 1000px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    background-color: #F3F3F3;
+}
+
+#footer div {
+    padding: 10px;
+}
+
+.debbug_query{
+    margin-left: 10px;
+    font-family:Courier New,Courier;
+    background-color: #D0D0D0;
+}
