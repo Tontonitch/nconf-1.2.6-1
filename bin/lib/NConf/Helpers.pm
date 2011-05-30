@@ -157,7 +157,7 @@ sub replaceMacros {
     # This hash is expected to have been defined accordingly by the component calling the replaceMacros() function.
 
     if($string =~ /%\w+%/g){
-        while($string =~ /%\w+%/){
+        #while($string =~ /%\w+%/){
 
             # available macro names defined here
 
@@ -169,7 +169,7 @@ sub replaceMacros {
 
             # %...%
             # ...
-        }
+        #}
     }
     return $string;
 }
