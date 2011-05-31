@@ -87,6 +87,7 @@ sub parseNagiosConfigFile {
         unless($_){next}
         if($_ =~ /^\s*$/){next}
         if($_ =~ /^\s*#/){next}
+        if($_ =~ /#\s*\}[^"']*\n*/){next} # assume the whole block can be skipped if we find an uncommented closing-bracket
         my $block = $_;
 
         # check if more than one class type is defined within the input file
