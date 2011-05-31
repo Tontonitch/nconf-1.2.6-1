@@ -90,6 +90,7 @@ if ($step2 == "yes") {
 
     echo 'Select the services (checkcommands) for your host<br><br>';
 
+    $checkcommands_checked = array();
     if ( isset($hosttemplate) ){
         // Get all checked commands
         $query = 'SELECT ItemLinks.fk_id_item,attr_value
@@ -105,10 +106,7 @@ if ($step2 == "yes") {
         while ($entry = mysql_fetch_assoc($result) ){
             $checkcommands_checked[] = $entry["fk_id_item"];
         }
-   
-    }else{
-        $checkcommands_checked = array();
-    }  // END isset(hosttemplate)
+   }  // END isset(hosttemplate)
 
     // Get all commands
     $query = 'SELECT fk_id_item,attr_value 
