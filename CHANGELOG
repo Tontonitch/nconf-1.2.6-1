@@ -1,3 +1,19 @@
+Release 1.2.6-1 (2011-05-31)
+
+FIXED	 removed "n" from the nagiosadmin contact notification options (n = none, incompatible with other options)
+FIXED	 ImportNagios.pm: some regexps
+ADDED	 automatic old nagios properties replacement: normal_check_interval & retry_check_interval by check_interval & retry_interval
+ADDED	 ImportNagios.pm: cleanup comments on configuration lines (;*) 
+ADDED	 ImportNagios.pm: definiton blocks is skipped if an uncommented closing-bracket is found 
+ADDED	 added the get_items perl script utility 
+FIXED	 calling mysql_query 2 times (lac_query) 
+ADDED	 allowing host-preset without preset commands (set as default) 
+ADDED	 "Failed to get host-alive check for host..." message: hostname in addition of item id 
+FIXED	 deprecated function ereg (> PHP 5.3) 
+FIXED	 sorting when IP-address field contains a hostname 
+FIXED	 KB3004: Generate Nagios config hangs (100% CPU load) 
+FIXED	 Install: perl version detection (perl version string has changed in new versions) 
+
 Release 1.2.6 (2009-11-26)
 
 FIXED    'permission denied' bug when a 'normal' user tries to clear a form
