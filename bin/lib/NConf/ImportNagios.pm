@@ -8,6 +8,8 @@
 #
 # Revision history:
 # 2009-02-25 v0.1   A. Gargiulo   First release
+# 2011-01-31 v0.1.1   Y. Charton    Handle comments in the imported config
+#                                   Superseded nagios properties substitution
 #
 ##############################################################################
 
@@ -99,7 +101,7 @@ sub parseNagiosConfigFile {
 
         # clean up current block (remove empty lines and trailing spaces/comments)
         $block =~ s/\n*.*\{//;
-        $block =~ s/\s*\}.*\n*//;
+        $block =~ s/\s*\}[^"']*\n*//;
         $block =~ s/^\s*\n//;
         $block =~ s/\n\s*\n/\n/g;
         $block =~ s/#.*\n/\n/;
@@ -113,7 +115,7 @@ sub parseNagiosConfigFile {
         foreach my $line (@lines){
 
             # clean up current line
-            $line =~ s/;.*//;
+            $line =~ s/;.*//g;
             $line =~ s/^\s*//g;
             $line =~ s/\s*$//g;
             if($line =~ /^\s*#/ || $line eq ""){next}
