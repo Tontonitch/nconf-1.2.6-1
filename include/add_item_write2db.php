@@ -103,7 +103,6 @@ if ( (mysql_num_rows($result)) AND ($config_class != "service") ){
                                                 WHERE id_attr = "'.$attr["key"].'"
                                 ');
 
-                                $result = mysql_query($lac_query);
                                 if ( mysql_result($lac_query, 0) == "yes"){
                                     $query = 'INSERT INTO ItemLinks
                                         (fk_id_item, fk_item_linked2, fk_id_attr, cust_order)
