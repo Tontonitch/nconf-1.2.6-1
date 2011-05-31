@@ -122,10 +122,24 @@ sub parseNagiosConfigFile {
             my $attr  = $1;
             my $value = $2;
 
+            # skip importing empty attributes
             if($attr eq "" or $value eq ""){
                 &logger(1,"Problem reading some attrs/values for $input_class (starting at line $filepos). Aborting.");
             }
 
+            # locking for nagios v2.x properties replaced in nagios v3.x
+            my $attr_rep = "";
+            if($attr eq "normal_check_interval") {
+                $attr_rep = "check_interval";
+            } elsif ($attr eq "retry_check_interval") {
+                $attr_rep = "retry_interval";
+            }
+            if($attr_rep ne "") {
+                &logger(3,"Superseded nagios property found. Replacing '$attr' by '$attr_rep'.");
+                $attr = $attr_rep;
+            }
+
+            # looking for multiple same attribute definitions
             if($block_hash{$attr}){
                 &logger(2,"'$attr' is defined more than once for $input_class (starting at line $filepos). Using last instance.");
             }
