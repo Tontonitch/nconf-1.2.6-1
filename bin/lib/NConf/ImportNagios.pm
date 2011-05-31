@@ -113,6 +113,7 @@ sub parseNagiosConfigFile {
         foreach my $line (@lines){
 
             # clean up current line
+            $line =~ s/;.*//;
             $line =~ s/^\s*//g;
             $line =~ s/\s*$//g;
             if($line =~ /^\s*#/ || $line eq ""){next}
