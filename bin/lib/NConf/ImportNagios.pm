@@ -7,7 +7,7 @@
 # Written by Angelo Gargiulo
 #
 # Revision history:
-# 2009-02-25 v0.1   A. Gargiulo   First release
+# 2009-02-25 v0.1     A. Gargiulo   First release
 # 2011-01-31 v0.1.1   Y. Charton    Handle comments in the imported config
 #                                   Superseded nagios properties substitution
 #
