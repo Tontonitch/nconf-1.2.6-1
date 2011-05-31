@@ -1344,7 +1344,7 @@ sub fetch_host_timeperiod_data {
     my @hostalive = &queryExecRead($sql, "Fetching host-alive check for host '$_[0]'", "row");
 
     unless($hostalive[1]){
-        &logger(1,"Failed to get host-alive check for host '$_[0]'. Make sure the host is linked with a host-preset. Aborting.")
+        &logger(1,"Failed to get host-alive check for host '".&getItemName($_[0])."' (item id: ".$_[0]."). Make sure the host is linked with a host-preset. Aborting.")
     }
 
     my @attrs;
