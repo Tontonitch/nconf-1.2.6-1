@@ -119,10 +119,10 @@
 
                 $count=0;
                 foreach($srv_summary[$server] as $line){
-                    if(ereg("Total",$line)){
+                    if(preg_match("/Total/",$line)){
                         echo "$line&nbsp;&nbsp;";
                         $count++;
-                        if(ereg("Errors",$line) && !preg_match('/Total Errors:\s+0/',$line)){
+                        if(preg_match("/Errors/",$line) && !preg_match('/Total Errors:\s+0/',$line)){
                             $status = "error";
                         }
                     }
