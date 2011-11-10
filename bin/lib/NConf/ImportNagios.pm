@@ -100,6 +100,7 @@ sub parseNagiosConfigFile {
         $file_class = $1;
 
         # clean up current block (remove empty lines and trailing spaces/comments)
+        $block =~ s/#.*//g;
         $block =~ s/\n*.*\{//;
         $block =~ s/\s*\}[^"']*\n*//;
         $block =~ s/^\s*\n//;
@@ -107,6 +108,7 @@ sub parseNagiosConfigFile {
         $block =~ s/#.*\n/\n/;
 
         my @lines = split(/\n/, $block);
+        &logger(5,"Reading the following block:\n$block");
         tie my %block_hash, 'Tie::IxHash';
         my $block_naming_attr = undef;
         my $service_parent_attr = undef;
