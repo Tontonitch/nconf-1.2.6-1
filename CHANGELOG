@@ -1,5 +1,6 @@
-Release 1.2.6-1 (2011-05-31)
+Release 1.2.6-1
 
+ADDED	 when debug mode is active, when a config is not generated successfully (doesn't pass the nagios binary check), an archive containing the config is generated in the output dir with a FAILED tag.  
 FIXED	 removed "n" from the nagiosadmin contact notification options (n = none, incompatible with other options)
 FIXED	 ImportNagios.pm: some regexps
 ADDED	 automatic old nagios properties replacement: normal_check_interval & retry_check_interval by check_interval & retry_interval

@@ -165,7 +165,11 @@
         }
 
     }else{
-        // Remove generated config - syntax check has failed
+        if(DEBUG_MODE == 1){
+            // Move generated config to "output" dir, but tag it as FAILED
+            system("mv ".NCONFDIR."/temp/NagiosConfig.tgz ".NCONFDIR."/output/NagiosConfig_FAILED.tgz.".time());
+        }
+        // Remove generated config
         system("rm -rf ".NCONFDIR."/temp/*");
         echo "<div id=attention>Deployment not possible due to errors in configuration.</div>";
     }
