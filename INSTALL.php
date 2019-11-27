@@ -305,7 +305,7 @@ if ($step == 0){
             # could not execute
             return "UNKNOWN";
         }
-        preg_match('/Distrib ([0-9]+[\.0-9]*)/i', $output, $version);
+        preg_match('/(Distrib|Ver) ([0-9]+[\.0-9]*)/i', $output, $version);
         if ( !empty($version[1]) ){
             return $version[1];
         }else{
