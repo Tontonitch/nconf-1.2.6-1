@@ -306,8 +306,8 @@ if ($step == 0){
             return "UNKNOWN";
         }
         preg_match('/(Distrib|Ver) ([0-9]+[\.0-9]*)/i', $output, $version);
-        if ( !empty($version[1]) ){
-            return $version[1];
+        if ( !empty($version[2]) ){
+            return $version[2];
         }else{
             return FALSE;
         }
